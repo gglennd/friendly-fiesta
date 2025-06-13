@@ -1,16 +1,28 @@
 {
   "compilerOptions": {
     "target": "es2022",
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx",
-    "module": "NodeNext",
-    "types": [
-      "node"
+    "lib": [
+      "ESNext",
+      "WebWorker"
     ],
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     "strict": true,
+    "strictNullChecks": true,
     "outDir": "./dist",
+    "esModuleInterop": true,
     "verbatimModuleSyntax": true,
     "skipLibCheck": true
   },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
   "exclude": ["node_modules"]
 }
